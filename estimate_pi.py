@@ -27,7 +27,7 @@ def ray_estimate_pi(num_samples):
 
 def main():
     # Estimate the value of PI with different sample points
-    refs = [ray_estimate_pi.remote(n) for n in [5000000, 500000000]]
+    refs = [ray_estimate_pi.remote(n) for n in [100000, 10000000]]
     print(ray.get(refs))
     sys.stdout.flush()
 
